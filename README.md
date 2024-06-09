@@ -23,13 +23,13 @@ python manage.py migrate
 celery -A ваш_проект worker --loglevel=info
 
 # API Эндпоинты
-GET /api/houses/ - Получение списка данных по домам
-GET /api/houses/{id}/ - Получение данных по конкретному дому
-POST /api/houses/{id}/calculate_billing/ 
+- GET /api/houses/ - Получение списка данных по домам
+- GET /api/houses/{id}/ - Получение данных по конкретному дому
+- POST /api/houses/{id}/calculate_billing/ 
 {
   "year": 2024,
   "month": 6
 } - Расчет квартплаты по дому 
-GET /api/houses/{id}/get_billing/?year=2024&month=6 - Получение данных по квартплате за месяц
+- GET /api/houses/{id}/get_billing/?year=2024&month=6 - Получение данных по квартплате за месяц
 
 ## Для удобного тестирования и документирования API используйте Swagger. После запуска сервера перейдите по адресу /api/swagger/
